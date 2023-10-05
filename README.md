@@ -1,6 +1,7 @@
 # coleta_tweepy_v.1
 
-Código para coleta de Tweets
+Código para coleta de Tweets usando tweepy
+
 
 Coletando Tweets usando a API v1.1 do Twitter com Python
 Introdução:

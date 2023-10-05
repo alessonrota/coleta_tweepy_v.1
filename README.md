@@ -9,12 +9,10 @@ Introdução:
 Este tutorial mostrará como coletar tweets usando a API v1.1 do Twitter com a ajuda da biblioteca TwitterAPI em Python. Os tweets coletados serão salvos em um arquivo CSV.
 Pré-requisitos:
 
-    Uma conta no portal de desenvolvedores do Twitter.
-    Chaves de acesso da API do Twitter (Consumer Key, Consumer Secret, Access Token, Access Token Secret).
-    Python instalado em sua máquina.
-    Bibliotecas TwitterAPI e pandas instaladas. Você pode instalá-las usando pip:
-
-    bash
+Uma conta no portal de desenvolvedores do Twitter.
+Chaves de acesso da API do Twitter (Consumer Key, Consumer Secret, Access Token, Access Token Secret).
+Python instalado em sua máquina.
+Bibliotecas TwitterAPI e pandas instaladas. Você pode instalá-las usando pip:
 
     pip install TwitterAPI pandas
 
@@ -25,44 +23,40 @@ Substitua os placeholders 'aqui' pelas suas chaves de acesso da API do Twitter.
 
 python
 
-consumer_key = 'SUA_CONSUMER_KEY'
-consumer_secret = 'SUA_CONSUMER_SECRET'
-access_token_key = 'SEU_ACCESS_TOKEN'
-access_token_secret = 'SEU_ACCESS_TOKEN_SECRET'
+    consumer_key = 'SUA_CONSUMER_KEY'
+    consumer_secret = 'SUA_CONSUMER_SECRET'
+    access_token_key = 'SEU_ACCESS_TOKEN'
+    access_token_secret = 'SEU_ACCESS_TOKEN_SECRET'
 
 2. Configuração da API:
 
 Inicialize a API do Twitter usando suas credenciais.
 
-python
 
-api = TwitterAPI(consumer_key, consumer_secret, access_token_key, access_token_secret)
+    api = TwitterAPI(consumer_key, consumer_secret, access_token_key, access_token_secret)
 
 3. Definindo o Termo de Busca:
 
 Substitua 'TERMO DE BUSCA' pelo termo ou hashtag que você deseja pesquisar.
 
-python
 
-termo_de_busca = 'SEU_TERMO_DE_BUSCA'
+    termo_de_busca = 'SEU_TERMO_DE_BUSCA'
 
 4. Definindo Parâmetros da Busca:
 
 Estes parâmetros determinam como a busca será realizada. Você pode ajustar o número de tweets retornados, o idioma e o tipo de resultado.
 
-python
 
-params = {
+    params = {
     ...
-}
+    }
 
 5. Fazendo a Requisição:
 
 Solicite os tweets usando a API.
 
-python
 
-r = api.request('search/tweets', params)
+    r = api.request('search/tweets', params)
 
 6. Processando os Tweets:
 
@@ -71,8 +65,7 @@ O código verifica se a requisição foi bem-sucedida e, em seguida, processa ca
 
 Os tweets processados são salvos em um DataFrame do pandas e, em seguida, exportados para um arquivo CSV.
 
-python
 
-df_tweets.to_csv('tweets.csv', index=False)
 
-Conclusão:
+    df_tweets.to_csv('tweets.csv', index=False)
+
